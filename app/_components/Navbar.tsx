@@ -9,24 +9,26 @@ const Navbar = () => {
 	return (
 		<nav className="flex items-center justify-between p-8 border border-slate-100 bg-white/50 drop-shadow-sm backdrop-blur-lg rounded-2xl">
 			<Link
-				className="text-3xl flex items-center gap-4"
+				className="text-base lg:text-3xl flex items-center gap-2 lg:gap-4"
 				href="/"
 			>
-				<Layers size="32" />
+				<Layers className="h-4 w-4 lg:h-8 lg:w-8" />
 				<span className="font-semibold">Daouda Camara</span>
 			</Link>
 			<NavigationMenu>
 				<NavigationMenuList>
-					<NavigationMenuItem>
+					<NavigationMenuItem className="hidden lg:inline-flex">
 						<Link
 							href="#aboutme"
 							legacyBehavior
 							passHref
 						>
-							<NavigationMenuLink className={ navigationMenuTriggerStyle({ className: 'bg-transparent' }) }>
+							<NavigationMenuLink className={ navigationMenuTriggerStyle({ className: 'bg-transparent hover:bg-white' }) }>
 								Who is Daouda?
 							</NavigationMenuLink>
 						</Link>
+					</NavigationMenuItem>
+					<NavigationMenuItem className="hidden lg:inline-flex">
 						<Link
 							href="#projects"
 							legacyBehavior
@@ -36,6 +38,8 @@ const Navbar = () => {
 								Projects
 							</NavigationMenuLink>
 						</Link>
+					</NavigationMenuItem>
+					<NavigationMenuItem className="hidden lg:inline-flex">
 						<Link
 							href="https://linkedin.com/in/daouda-camara-bf"
 							target="_blank"
