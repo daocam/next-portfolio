@@ -7,7 +7,7 @@ import { NavigationMenu, NavigationMenuItem, NavigationMenuLink, NavigationMenuL
 
 const Navbar = () => {
 	return (
-		<nav className="flex items-center justify-between p-8 border border-slate-100 bg-white/50 drop-shadow-sm backdrop-blur-lg rounded-2xl">
+		<nav className="flex justify-between items-center p-4 lg:p-6 border border-slate-100 bg-white/50 backdrop-blur-lg drop-shadow-sm rounded-2xl">
 			<Link
 				className="text-base lg:text-3xl flex items-center gap-2 lg:gap-4"
 				href="/"
@@ -39,7 +39,7 @@ const Navbar = () => {
 							</NavigationMenuLink>
 						</Link>
 					</NavigationMenuItem>
-					<NavigationMenuItem className="hidden lg:inline-flex">
+					<NavigationMenuItem>
 						<Link
 							href="https://linkedin.com/in/daouda-camara-bf"
 							target="_blank"
